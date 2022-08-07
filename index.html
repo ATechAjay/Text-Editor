@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Text Editor</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="options">
+
+        <!-- Text format -->
+
+        <button id="bold" class="option-btn format">
+          <i class="fa-solid fa-bold"></i>
+        </button>
+        <button id="italic" class="option-btn format">
+          <i class="fa-solid fa-italic"></i>
+        </button>
+        <button id="underline" class="option-btn format">
+          <i class="fa-solid fa-underline"></i>
+        </button>
+        <button id="strikethrough" class="option-btn format">
+          <i class="fa-solid fa-strikethrough"></i>
+        </button>
+        <button id="superscript" class="option-btn script">
+          <i class="fa-solid fa-superscript"></i>
+        </button>
+        <button id="subscript" class="option-btn script">
+          <i class="fa-solid fa-subscript"></i>
+        </button>
+
+        <!-- List -->
+
+        <button id="insertOrderList" class="option-btn">
+          <i class="fa-solid fa-list-ol"></i>
+        </button>
+        <button id="insertUnorderList" class="option-btn">
+          <i class="fa-solid fa-list"></i>
+        </button>
+
+        <!-- Undo/redo -->
+
+        <button id="undo" class="option-btn">
+          <i class="fa-solid fa-undo"></i>
+        </button>
+        <button id="redo" class="option-btn">
+          <i class="fa-solid fa-redo"></i>
+        </button>
+
+        <!-- Link -->
+
+        <button id="createLink" class="adv-option-btn">
+          <i class="fa-solid fa-link"></i>
+        </button>
+        <button id="unlink" class="option-btn">
+          <i class="fa-solid fa-unlink"></i>
+        </button>
+
+        <!-- Alignment -->
+
+        <button id="justifyLeft" class="option-btn align">
+          <i class="fa-solid fa-align-left"></i>
+        </button>
+        <button id="justifyCenter" class="option-btn align">
+          <i class="fa-solid fa-align-center"></i>
+        </button>
+        <button id="justifyRight" class="option-btn align">
+          <i class="fa-solid fa-align-right"></i>
+        </button>
+        <button id="justifyFull" class="option-btn align">
+          <i class="fa-solid fa-align-justify"></i>
+        </button>
+        <button id="indent" class="option-btn spacing">
+          <i class="fa-solid fa-indent"></i>
+        </button>
+        <button id="outdent" class="option-btn spacing">
+          <i class="fa-solid fa-outdent"></i>
+        </button>
+
+        <!-- Heading -->
+
+        <select id="formatBlock" class="adv-option-btn">
+          <option value="H1">H1</option>
+          <option value="H2">H2</option>
+          <option value="H3">H3</option>
+          <option value="H4">H4</option>
+          <option value="H5">H5</option>
+          <option value="H6">H6</option>
+        </select>
+
+        <!-- Font -->
+
+        <select id="fontName" class="adv-option-btn"></select>
+        <select id="fontSize" class="adv-option-btn"></select>
+
+        <!-- Color -->
+
+        <div class="input-wrapper">
+          <input type="color" id="foreColor" class="adv-option-btn" />
+          <label for="foreColor">Font Color</label>
+        </div>
+        <div class="input-wrapper">
+          <input type="color" id="backColor" class="adv-option-btn" />
+          <label for="backColor">Highlight Color</label>
+        </div>
+      </div>
+
+      <div id="text-input" contenteditable="true"></div>
+    </div>
+  </body>
+</html>
